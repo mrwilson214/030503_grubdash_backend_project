@@ -133,7 +133,6 @@ function update(req, res) {
   const order = res.locals.order;
   const {
     data: {
-      id = undefined,
       deliverTo = undefined,
       mobileNumber = undefined,
       status = undefined,
@@ -141,7 +140,6 @@ function update(req, res) {
   } = req.body;
 
   // Update the order
-  if (id) order.id = id;
   order.deliverTo = deliverTo;
   order.mobileNumber = mobileNumber;
   order.status = status;
